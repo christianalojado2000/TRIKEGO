@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 📍 Location -->
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location:"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <!-- 🚗 Status -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- 👤 Passenger -->
+        <TextView
+            android:id="@+id/txtPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Passenger:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- 📞 Phone Number -->
+        <TextView
+            android:id="@+id/txtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- 🧑‍🧒 Guardian Number -->
+        <TextView
+            android:id="@+id/txtGuardianNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardian Number:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- ⏱ ETA -->
+        <TextView
+            android:id="@+id/txtEta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ETA:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- 🧍‍♂️ Driver -->
+        <TextView
+            android:id="@+id/txtDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Driver: None"
+            android:textColor="#444"
+            android:textStyle="italic"
+            android:layout_marginTop="2dp" />
+
+        <!-- 📦 Pickup Address -->
+        <TextView
+            android:id="@+id/txtPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup Address:"
+            android:textColor="#444"
+            android:layout_marginTop="2dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:backgroundTint="#E53935"
+                android:paddingHorizontal="16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrived"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

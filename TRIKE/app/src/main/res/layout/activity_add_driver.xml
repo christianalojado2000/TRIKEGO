@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- DRIVER IMAGE -->
+    <ImageView
+        android:id="@+id/driverImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_person"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_border"
+        android:padding="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BUTTON TO SELECT DRIVER IMAGE -->
+    <Button
+        android:id="@+id/chooseImageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Driver Image"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/driverImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LICENSE IMAGE -->
+    <ImageView
+        android:id="@+id/licenseImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_border"
+        android:padding="4dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/chooseImageBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BUTTON TO SELECT LICENSE IMAGE -->
+    <Button
+        android:id="@+id/chooseLicenseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select License Image"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/licenseImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- DRIVER NAME -->
+    <EditText
+        android:id="@+id/driverNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Driver Name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/chooseLicenseBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- PLATE NUMBER -->
+    <EditText
+        android:id="@+id/plateNumberInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Plate Number"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/driverNameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TERMINAL -->
+    <EditText
+        android:id="@+id/terminalInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Terminal (e.g. Kanto)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/plateNumberInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SAVE BUTTON -->
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Driver"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/terminalInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

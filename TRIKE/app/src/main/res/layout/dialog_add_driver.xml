@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- DRIVER PHOTO -->
+        <ImageView
+            android:id="@+id/driverImagePreview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_person"
+            android:background="@drawable/rounded_background"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <!-- LICENSE PHOTO -->
+        <ImageView
+            android:id="@+id/licenseImagePreview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_person"
+            android:background="@drawable/rounded_background"
+            android:padding="10dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnSelectLicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select License Image"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <!-- INPUT FIELDS -->
+        <EditText
+            android:id="@+id/driverNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Driver Name"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/plateNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Plate Number" />
+
+        <EditText
+            android:id="@+id/terminalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Terminal (e.g. Kanto)" />
+
+    </LinearLayout>
+
+</ScrollView>

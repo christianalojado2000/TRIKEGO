@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FF"
+    tools:context=".MainActivity">
+
+    <!-- 🔹 App Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logogo"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔹 App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TRIKE GO"
+        android:textColor="#222222"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔹 Fare Title -->
+    <TextView
+        android:id="@+id/fareTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Toda Fares"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔹 Fare Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fareCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/fareTitle"
+        app:layout_constraintBottom_toTopOf="@id/booknow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 🔹 Fare List -->
+                <TextView
+                    android:text="Kanto / Southwoods: ₱80.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Kanto / Halang: ₱50.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Kanto / Ilaya: ₱80.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Kanto / Tramo Complex Graceland: ₱100.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Halang / Biñan Bayan: ₱80.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Halang / Southwoods: ₱70.00"
+                    style="@style/FareText" />
+
+                <TextView
+                    android:text="Bayan / Southwoods: ₱80.00"
+                    style="@style/FareText" />
+
+                <!-- 🔹 Special Trip Note -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="For special trip kindly negotiate with our driver."
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 🔹 Book Now Button -->
+    <Button
+        android:id="@+id/booknow"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/lavender"
+        android:text="Book Now"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="6dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 🔹 Bottom Navigation -->
+    <!-- 🔹 Bottom Navigation -->
+    <!-- 🔹 Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@color/lavender"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- 🔸 Fares -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ufare"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/nav_button_bg"
+                android:contentDescription="Fares"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/checklist"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fares"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- 🔸 Bookings -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="28dp">
+
+            <ImageButton
+                android:id="@+id/userhistory"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/nav_button_bg"
+                android:contentDescription="Bookings"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/success"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bookings"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- 🔸 Back -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/logBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/log"
+                android:contentDescription="Back"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Log Out"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "456617833426",
+    "firebase_url": "https://login-register-firebase-23141-default-rtdb.firebaseio.com",
+    "project_id": "login-register-firebase-23141",
+    "storage_bucket": "login-register-firebase-23141.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456617833426:android:9436786b0643ac5b17ce0b",
+        "android_client_info": {
+          "package_name": "com.example.trike"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApXh1QZZqxCqaUntplmJYx23mJUEI8giQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456617833426:android:2651780c286ce9ac17ce0b",
+        "android_client_info": {
+          "package_name": "com.example.trikeman"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApXh1QZZqxCqaUntplmJYx23mJUEI8giQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
